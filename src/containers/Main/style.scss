@@ -1,0 +1,179 @@
+@import "../../variables";
+.Main {
+  background: linear-gradient(to top, #452368 48%, #ef549e 91%);
+  // height: 3566px;
+  .content-padding {
+    padding: 25px;
+  }
+  .page-content {
+    .titleBigFont {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+      .mission-left-text {
+        width: 35%;
+        margin: 10em 0 5em 0;
+        button {
+          margin-top: 20px;
+        }
+      }
+    .titleMargin {
+      margin-bottom: 70px;
+    }
+    .testimonials {
+      margin: 10em 0 5em 0;
+    }
+  }
+  .sponsors-carousel {
+    padding: 70px 0;
+  }
+  .EventsMain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    >div{
+      display: flex;
+      justify-content: center;
+    }
+    .slick-slider {
+      width: 100%;
+      margin: 0 auto;
+      .slick-arrow {
+        width: 35px;
+        height: 35px;
+        &:before {
+          font-size: 35px;
+        }
+      }
+      .slick-dots{
+        > li{
+          width: 27px;
+          height: 1px;
+          background-color: #fff;
+          opacity: 0.35;
+          &.slick-active {
+            opacity: 1;
+          }
+          >button{
+            display: none;
+          }
+        }
+      }
+      .slick-list{
+        .slick-track{
+          .slick-slide{
+            width: 25%;
+            display: flex;
+            justify-content: space-around;
+          }
+        }
+      }
+    }
+    .carouselItem{
+        padding: 20px;
+        outline: none;
+        display: flex !important;
+        justify-content: center;
+    }
+    .slick-arrow:before{
+        color: $secondary-green;
+    }
+    .EventsTypes{
+      width: 100%;
+      height: 32px;
+      margin-bottom: 47px;
+      .EventsTypeItem{
+        margin: 0 33px;
+        &.active{
+          border-bottom: solid 4px #04caa6;
+        }
+        font-family: 'Rubik';
+        font-size: 20px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #fff;
+        cursor: pointer;
+        &.active{
+          color: #04caa6;
+        }
+      }
+    }
+    .EventsViewAllMain{
+      display: flex;
+      justify-content: center;
+      margin-top: 122px;
+      .EventsViewAllButton{
+        width: 223px;
+        // height: 56px;
+        border-radius: 50.5px;
+        border: solid 2px #fff;
+        font-family: 'Rubik';
+        font-size: 20px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #fff;
+        padding: 16px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+  .ActorsMain{
+    margin-bottom: 138px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 300px;
+    width: 76%;
+    .slick-slider {
+      width: 100%;
+      margin: 0 auto;
+      .slick-arrow {
+        width: 61px;
+        height: 61px;
+        &:before {
+          font-size: 35px;
+        }
+      }
+      .slick-dots{
+        > li{
+          width: 27px;
+          height: 1px;
+          background-color: #fff;
+          opacity: 0.35;
+          &.slick-active {
+            opacity: 1;
+          }
+          >button{
+            display: none;
+          }
+        }
+      }
+      .slick-list{
+        .slick-track{
+          .slick-slide{
+            width: 25%;
+            display: flex;
+            justify-content: space-around;
+          }
+          &.slick-current{
+            >div{
+              >div{
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    
+  }
+}
+

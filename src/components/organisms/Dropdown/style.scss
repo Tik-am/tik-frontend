@@ -1,0 +1,62 @@
+@import '../../../variables.scss';
+
+.Dropdown {
+  position: relative;
+  &_label {
+    font-family: 'Mont';
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      color: $text-color;
+      .Icon {
+        svg {
+          fill: $secondary-green;
+        }
+      }
+    }
+    .Icon {
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    &.active {
+      color: $text-color;
+      .Icon {
+        svg {
+          transform: rotateX(180deg);
+          transition: all .3s linear;
+          fill: $text-color;
+        }
+      }
+    }
+  }
+  &_content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 45px;
+    > div {
+      position: relative;
+      background-color: $secondary-white;
+      .dropdown-list {
+        padding: 25px;
+        border-radius: 10px;
+      }
+      span {
+        white-space: nowrap;
+        cursor: pointer;
+        display: block;
+        padding: 5px 0;
+        text-align: center;
+        &:hover {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}

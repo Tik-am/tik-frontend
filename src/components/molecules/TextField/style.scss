@@ -1,0 +1,66 @@
+@import "../../../variables";
+
+.TextField_Style {
+  width: 421px;
+  height: 2px;
+  opacity: 0.42;
+  border: none;
+  border-bottom: solid 1px #979797;
+  color: $secondary-black;
+  background-color: $secondary-white;
+  font-size: 15px;
+  padding: 5px 15px;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.TextFieldComponent {
+  position: relative;
+  .TextField {
+    @extend .TextField_Style;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-size: 14px;
+      opacity: 50%;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      font-size: 14px;
+      opacity: 50%;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      font-size: 14px;
+      opacity: 50%;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      font-size: 14px;
+      opacity: 50%;
+    }
+    &.withRadius {
+      border-radius: 30px;
+    }
+    &.withButton {
+      padding-right: 70px;
+    }
+    &.small {
+      height: 30px;
+    }
+    &.medium {
+      height: 60px;
+      font-size: 18px;
+      &.withRadius {
+        border-radius: 60px;
+      }
+    }
+  };
+  .Button {
+    margin-left: -60px;
+  }
+}
+
+.Textarea {
+  @extend .TextField_Style;
+  resize: none;
+  // border-radius: 6px;
+  height: 190px;
+  padding-top: 15px;
+}

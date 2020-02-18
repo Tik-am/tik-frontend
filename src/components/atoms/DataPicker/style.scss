@@ -1,0 +1,10 @@
+.PaperKeyboardDatePicker{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    >div{
+        width: 90%;
+        outline: none;
+        border: none;
+    }
+}

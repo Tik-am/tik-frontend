@@ -1,0 +1,50 @@
+// @import "~sass/variables";
+
+// .AboutUs{
+//   .teamMemberTitle{
+//     text-transform: uppercase;
+//     padding-bottom: 80px;
+//   }
+//   .teamMembersCarouselContainer{
+//     padding-bottom: 50px;
+//     .slick-slider {
+//       width: calc(100% - 60px);
+//       margin: 0 auto;
+//       .slick-arrow {
+//         width: 35px;
+//         height: 35px;
+//         &:before {
+//           font-size: 35px;
+//         }
+//       }
+//     }
+//     .carouselItem{
+//         padding: 20px;
+//         outline: none;
+//         display: flex !important;
+//         justify-content: center;
+//     }
+//     .slick-arrow:before{
+//         color: $secondary-green;
+//     }
+//   }
+// }
+
+
+// @media screen and (max-width: 630px){
+//  .AboutUs{
+//    .carouselItem{
+//      padding: 10px !important;
+//    }
+//  }
+// }
+
+// @media screen and (max-width: 830px){
+//   .AboutUs{
+//     .aboutUsBlockSlider{
+//       .teamMemberTitle{
+//          font-size: $extraLarge-font-size;
+//       }
+//     }
+//   }
+//  }

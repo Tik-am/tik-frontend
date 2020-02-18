@@ -1,0 +1,37 @@
+.ContactUs {
+  height: 1526px;
+  background-image: linear-gradient(to top, #452368 28%, #ef549e 158%);
+  .ContactUsMain{
+    width: 90%;
+    .ContactUsForm{
+      width: 512px;
+      height: 680px;
+      border-radius: 13px;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: center;
+      .ContactUsMainText{
+        font-family: 'Rubik';
+        font-size: 30px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000;
+        margin-top: 46px;
+      }
+      .ContactUsMainInputs{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        >div{
+          width: 100%;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
