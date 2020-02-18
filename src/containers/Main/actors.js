@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {
     Paper,
     Carousel,
-    ViewAll,
+    Button,
     BackgroundImage
   } from '../../components';
   
@@ -10,8 +10,11 @@ import {
 
   import './style.scss'
 
+  import { useTranslator } from '../../utils/translator';
 
 const Actors = () => {
+  const { t } = useTranslator();
+
 
     const actors = ActorsData.map((item) => (
         <BackgroundImage 
@@ -52,7 +55,7 @@ const Actors = () => {
             }}>
                 {actors}
             </Carousel>
-            <ViewAll />
+            <Button text={t("ViewAll")} />
         </Paper>
     )
 }

@@ -10,6 +10,8 @@ import Carousel from './atoms/Carousel';
 import ViewAll from './atoms/ViewAll';
 import BackgroundImage from './atoms/BackgroundImage';
 import Button from './atoms/Button';
+import RadioButtons from './atoms/RadioButtons';
+import CheckboxButton from './atoms/CheckboxButton';
 
 // // Molecules
 import Event from './molecules/Event';
@@ -40,5 +42,7 @@ export {
   ViewAll,
   BackgroundImage,
   Button,
-  TextField
+  TextField,
+  RadioButtons,
+  CheckboxButton
 }

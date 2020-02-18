@@ -7,7 +7,8 @@ import {
 import './style.scss'
 
 const ViewAll = ({
-    onClick
+    onClick,
+    text
 }) => {
     return (
         <Paper  
@@ -15,7 +16,7 @@ const ViewAll = ({
             onClick={onClick}
         >
             <Paper  className='ViewAllButton'>
-                View All
+                {text}
             </Paper>
         </Paper>
     )

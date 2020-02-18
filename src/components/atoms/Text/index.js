@@ -5,12 +5,16 @@ import Styled from './styled';
 const Text = ({
   color,
   size,
-  text
+  text,
+  onClick,
+  style
 }) => {
   return(
     <Styled.Span
       color={color}
       size={size}
+      onClick={onClick}
+      style={style}
       >
       {text}
     </Styled.Span>

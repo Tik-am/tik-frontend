@@ -1,5 +1,5 @@
 .ContactUs {
-  height: 1526px;
+  height: 1126px;
   background-image: linear-gradient(to top, #452368 28%, #ef549e 158%);
   .ContactUsMain{
     width: 90%;
@@ -22,7 +22,7 @@
         margin-top: 46px;
       }
       .ContactUsMainInputs{
-        width: 90%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -30,6 +30,21 @@
           width: 100%;
           margin-top: 20px;
         }
+      }
+      .ContactUsPreferredMethod{
+       width: 80%; 
+       .ContactUsPreferredMethodText{
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #000;
+       }
+       >div{
+         margin-top: 30px;  
+       }
       }
     }
   }

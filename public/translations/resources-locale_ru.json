@@ -21,6 +21,7 @@
   "_EnterYourEmail_" : "введите вашу почту",
   "_GetInTouch_": "Связаться с нами",
   "_SendMassage_": "Oтправить письмо",
+  "_Send_": "Oтправить",
   "_Location_": "Акоп Акопян 3/2",
   "_Place_":"Ереван, Армения",
   "_FollowUs_":"Подписывайтесь",
@@ -28,6 +29,7 @@
   "_Surname_":"Фамилия",
   "_Email_":"Эл. Почта",
   "_Phone_": "Номер телефоны",
+  "_Message_": "Сообщение",
   "_TextAreaText_":"напишите здесь что нибудь смешное",
   "_OurMision_":"Наша миссия",
   "_WhyChooseUs_":"Почему выбрать нас",
@@ -43,6 +45,16 @@
   "_UX/UIDesign_": "UX/UI Дизайн",
   "_Teaching_": "Обшучение",
   "_WaveQuestion_": "Вы все еще думаете, как начать свои первые шаги?",
-  "_ViewMore_" : "СМОТРЕТЬ БОЛЬШЕ"
+  "_ViewMore_" : "СМОТРЕТЬ БОЛЬШЕ",
+  "ViewAll" : "Посмотреть все",
+  "_PreferredMethodOfCommunication_": "Предпочитаемый способ общения",
+  "_Password_": "Пароль",
+  "_ConfirmPassword_": "Подтвердите Пароль",
+  "_Enter_": "Войти",
+  "Login": "Авторизоваться",
+  "Register": "Регистр",
+  "ForgottenYourPassword": "Забыли свой пароль?",
+  "DontHaveAnAccount": "Не имеют аккаунта?",
+  "KeepMeSignedIn": "Держите меня в системе"
 
 }

@@ -165,4 +165,106 @@ header {
       }
     }
   }
+
+  .userLogo{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: solid 1px #fff;
+    position: relative;
+    cursor: pointer;
+    .userLogoIcon{
+      width: 100%;
+      height: 54px;
+      >span{
+        height: 54px;
+        margin-top: 7px;
+      }
+    }
+    .userList{
+      width: 200px;
+      background-color: #fff;
+      position: relative;
+      right: 75px;
+      top: 20px;
+      .nav-list {
+        width: 100%;
+        li {
+          width: 100%;
+          margin: 0;
+          padding: 10px 26px;
+          border-bottom: solid 1px #979797;
+          a {
+            color: #000;
+            font-size: 16px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.31;
+            text-transform: capitalize;
+            &.hover{
+              color: #452368;
+            }
+          }
+        }
+      }
+      &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color: $secondary-white;
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+      }
+    }
+  }
+}
+
+.Login{
+  width: 411px;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  padding: 10px 38px ;
+  .LoginSwitcher{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    >div{
+      width: 50%;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.64;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000;
+      cursor: pointer;
+      &.active{
+        font-size: 16px;
+        font-weight: bold;
+        color: #4a256a;
+        border-bottom-color: linear-gradient(to left, #452368, #ef549e -10%);
+        border-bottom: solid 3px;
+      }
+    }
+  }
+}
+.CheckboxButton{
+  margin: 18px 0;
+}
+
+.line{
+  border-bottom: solid 1px #979797;
+}
+.loginTexts{
+  padding: 10px 0;
+  text-align: center;
 }

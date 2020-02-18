@@ -7,7 +7,7 @@ import {
     FindTicket,
     Event,
     Carousel,
-    ViewAll
+    Button
   } from '../../components';
   
   import {
@@ -65,7 +65,7 @@ const Events = () => {
             }}>
                 {events}
             </Carousel>
-            <ViewAll />
+            <Button text={t("ViewAll")} />
         </Paper>
     )
 }

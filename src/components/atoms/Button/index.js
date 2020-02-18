@@ -1,25 +1,37 @@
 import React from 'react'
-import classname from 'classnames';
 
-import './style.scss';
+import Styled from './styled'
 
 const Button = ({
-    size,
-    bgColor,
-    children,
-    className,
-    ...restProps
+    onClick,
+    text,
+    margin,
+    width,
+    height,
+    borderRadius,
+    border,
+    color,
+    padding,
+    background
 }) => {
     return (
-        <button
-            className={classname('Button', {
-              [size || 'small']: size || 'small',
-              [bgColor || 'green'] : bgColor || 'green',
-              [className]: className,
-            })}
-            {...restProps}>
-            {children}
-        </button>
-    );
+        <Styled.Container  
+        margin={margin}
+        >
+            <Styled.Button 
+                onClick={onClick}
+                width={width}
+                height={height}
+                borderRadius={borderRadius}
+                border={border}
+                color={color}
+                padding={padding}
+                background={background}
+            >
+                {text}
+            </Styled.Button>
+        </Styled.Container>
+    )
 }
-export default Button;
+
+export default Button

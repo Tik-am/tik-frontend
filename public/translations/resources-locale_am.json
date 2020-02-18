@@ -21,6 +21,7 @@
   "_EnterYourEmail_" : "գրեք ձեր էլ. հասցեն",
   "_GetInTouch_": "Կապ մեզ հետ",
   "_SendMassage_":"Ուղարկել նամակ",
+  "_Send_":"Ուղարկել",
   "_Location_": "Հակոբ Հակոբյան 3/2",
   "_Place_": "Երևան, Հայաստան",
   "_FollowUs_":"Հետևեք մեզ",
@@ -28,6 +29,7 @@
   "_Surname_":"Ազգանուն",
   "_Email_":"Էլ. Հասցե",
   "_Phone_": "Հեռախոսահամար",
+  "_Message_": "Հաղորդագրություն",
   "_TextAreaText_":"Գրեք այստեղ ինչ-որ ուրախ մի բան",
   "_OurMision_":"Մեր առաքելությունը",
   "_WhyChooseUs_":"Ինչու ընտրել մեզ",
@@ -43,6 +45,15 @@
   "_UX/UIDesign_": "UX/UI ՁևԱՎՈՐՈՒՄ",
   "_Teaching_": "ՈՒՍՈՒՑՈՒՄ",
   "_WaveQuestion_": "Դուք դեռ մտածու՞մ եք ինչպես անել առաջին քայլերը։",
-  "_ViewMore_" : "ԴԻՏԵԼ ԱՎԵԼԻՆ"
-
+  "_ViewMore_" : "ԴԻՏԵԼ ԱՎԵԼԻՆ",
+  "ViewAll" : "Դիտել բոլորը",
+  "_PreferredMethodOfCommunication_": "Հաղորդակցման նախընտրելի մեթոդը",
+  "_Password_": "Գաղտնաբառ",
+  "_ConfirmPassword_": "Հաստատել գաղտնաբառը",
+  "_Enter_": "Ներս",
+  "Login": "Մուտք",
+  "Register": "Գրանցվել",
+  "ForgottenYourPassword": "Մոռացել եք ձեր գաղտնաբառը?",
+  "DontHaveAnAccount": "Հաշիվ չունեք?",
+  "KeepMeSignedIn": "Պահել ինձ համակարգի մեջ"
 }

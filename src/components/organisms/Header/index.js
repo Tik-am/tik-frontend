@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import Modal from '@material-ui/core/Modal';
+
 import {
   NavLink,
   withRouter,
@@ -12,7 +14,7 @@ import {
   Input,
   Paper,
   Dropdown,
-  Button
+  Icon
 } from '../../';
 
 import './style.scss'
@@ -23,6 +25,9 @@ import {
   calendarSmallLogo,
   phoneSmallLogo
 } from '../../../assets';
+
+import UserDropdown from  './userDropdown'
+import Login from  './login-singup'
 
 
 import { useTranslator } from '../../../utils/translator';
@@ -50,6 +55,7 @@ const Header = ({
   const [active, setActive] = useState(false);
   const [activeLang, setActiveLang] = useState(languages[0]);
   const [activePage, setActivePage] = useState(companyPages[0]);
+  const [isAuth, setIsAuth] = useState(false);
 
   useEffect(() => {
     const selectedPage = companyPages.find(item => item.value.includes(location.pathname.split('/')[1]));
@@ -66,7 +72,48 @@ const Header = ({
     push(item.value);
     setActive(!active);
   };
+  const [open, setOpen] = React.useState(false);
 
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const wrapperRef = useRef(null);
+
+  function handleClickOutside(event) {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      if(!(window.innerWidth < 900)) {
+        setOpen(false);
+      }
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  });
+
+  const guestDropdown = () => (
+    <Paper flexName="flexible aCenter jCenter userLogo" onClick={handleOpen} >
+       <Paper className='flexible jCenter aCenter userLogoIcon'>
+          <Icon name='user' width={40} height={40}/>
+        </Paper>
+       <Modal
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+        open={open}
+        onClose={handleClose}
+      >
+        <Login ref={wrapperRef}/>
+      </Modal>
+    </Paper>
+  )
 
   return (
     <header className={classnames({ 'active': active })}>
@@ -108,7 +155,9 @@ const Header = ({
             placeholder='Search'
             border='solid 1px white'
           />
-          {/* <input type='avatar' /> */}
+          <Paper className='avatar'>
+            {isAuth ? <UserDropdown /> : guestDropdown() }
+          </Paper>
 
           <Paper className="languages">
               <Dropdown

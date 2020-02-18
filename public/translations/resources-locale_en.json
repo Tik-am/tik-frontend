@@ -22,6 +22,7 @@
   "_EnterYourEmail_" : "Enter Your Email",
   "_GetInTouch_": "Get In Touch",
   "_SendMassage_":"Send Massage",
+  "_Send_":"Send",
   "_Location_":"Hakob Hakobyan 3/2",
   "_Place_":"Yeravan, Armenia",
   "_FollowUs_":"Follow us",
@@ -29,6 +30,7 @@
   "_Surname_":"Surname",
   "_Email_":"Email",
   "_Phone_": "Phone",
+  "_Message_": "Message",
   "_TextAreaText_":"Write here something funy",
   "_OurMision_":"our mission",
   "_WhyChooseUs_":"why choose us?",
@@ -44,6 +46,15 @@
   "_UX/UIDesign_": "UX/UI Design",
   "_Teaching_": "Teaching",
   "_WaveQuestion_": "Do you still think how to start your first steps?",
-
-  "_ViewMore_" : "view more"
+  "_ViewMore_" : "view more",
+  "ViewAll" : "View All",
+  "_PreferredMethodOfCommunication_": "Preferred method of communication",
+  "_Password_": "Password",
+  "_ConfirmPassword_": "Confirm Password",
+  "_Enter_": "Enter",
+  "Login": "Login",
+  "Register": "Register",
+  "ForgottenYourPassword": "Forgotten your password?",
+  "DontHaveAnAccount": "Don’t have an account?",
+  "KeepMeSignedIn": "Keep me signed in"
 }
