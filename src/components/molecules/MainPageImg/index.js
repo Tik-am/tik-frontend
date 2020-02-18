@@ -8,7 +8,9 @@ import {
 const MainPageImg = ({
     width, 
     height,
-    src
+    src,
+    withSearch,
+    gradient
 }) => {
     console.log('width:', width)
     return (
@@ -16,8 +18,9 @@ const MainPageImg = ({
             width={width}
             height={height}
             src={src}
+            gradient={gradient}
        >
-           <FindTicket />
+           {withSearch ?  <FindTicket /> : null}
        </Styled.MainPageImg>
     )
 }

@@ -9,9 +9,12 @@ export default {
         justify-content: center;
         align-content: center;
         align-item: center;
-        background-image: url(${({src}) => src});
+        background-image: ${({gradient, src}) => gradient 
+            ?  ` url(${src}), linear-gradient(to bottom, transparent 0%, transparent 100%);` 
+            :  `url(${src})`};  
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+
    `
 }

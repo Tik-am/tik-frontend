@@ -5,7 +5,6 @@ export default {
     Span: styled.span`
         color: ${({color}) => color || '#000'};
         font-size: ${({size}) => size || `16px`};
-        font-family: Mont;
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;

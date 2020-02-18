@@ -25,6 +25,8 @@ import hamerg5 from './hamerg5.jpg';
 import hamerg6 from './hamerg6.jpg';
 import cirk from './cirk.jpg';
 import home1 from './home1.png';
+import about from './about.jpg';
+import about2 from './about2.png';
 
 import angelinaJolie from './actors/anjelinaJoli.jpg'
 import bredPit from './actors/bredPit.jpg'
@@ -70,5 +72,7 @@ export {
     Leonardo,
     margo,
     milaKunis,
-    willSmith
+    willSmith,
+    about,
+    about2
 };

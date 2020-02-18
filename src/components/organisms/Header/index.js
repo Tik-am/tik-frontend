@@ -72,12 +72,14 @@ const Header = ({
     <header className={classnames({ 'active': active })}>
       <nav className="flexible aCenter">
         <Paper flexName="flexible jBetween aCenter grow" className="page-content">
-          <Image
-              src={SmallLogo}
-              alt='Logo'
-              width={133}
-              height={43.8}
+          <NavLink to="/">
+            <Image
+                src={SmallLogo}
+                alt='Logo'
+                width={133}
+                height={43.8}
             />
+          </NavLink>
           <LogoAndText 
             text='Gift Cards'
             width={22}
@@ -123,7 +125,7 @@ const Header = ({
               <ul className="nav-list">
                 <li>
                   <NavLink
-                    to="/"
+                    to="/about-us"
                     onClick={() => setActive(!active)}
                   >
                     {t('_AboutUs_')}

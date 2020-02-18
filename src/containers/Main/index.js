@@ -35,6 +35,7 @@ const Main = () => {
         <MainPageImg
           src={home1}
           height={951}
+          withSearch
         />
           <Events />
           <Actors />

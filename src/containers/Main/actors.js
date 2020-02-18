@@ -33,6 +33,22 @@ const Actors = () => {
                  speed: 100,
                  slidesToShow: actors && actors.length > 4 ? 4 : actors.length,
                  slidesToScroll: 1,
+                 responsive: [
+                    {
+                      breakpoint: 850,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                      }
+                    },
+                    {
+                      breakpoint: 500,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                      }
+                    }
+                    ]
             }}>
                 {actors}
             </Carousel>
