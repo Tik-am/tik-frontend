@@ -1,0 +1,104 @@
+.SliderContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 76%;
+    .slick-slider {
+      width: 100%;
+      height: 400px;
+      margin: 0 auto;
+      .slick-arrow {
+        width: 61px;
+        height: 61px;
+        z-index: 100;
+        border: solid 2px #fff;
+        border-radius: 50%;
+        &:before {
+          font-size: 35px;
+          font-family: 'monospace' !important;
+          font-style: normal;
+          font-weight: 400;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+        }
+      }
+        .slick-next{
+          position: absolute;
+          right: -100px;
+        }
+        .slick-prev{
+          position: absolute;
+          left: -100px;
+        }
+      .slick-dots{
+        > li{
+          height: 1px;
+          background-color: #fff;
+          opacity: 0.35;
+          &.slick-active {
+            opacity: 1;
+          }
+          >button{
+            display: none;
+          }
+        }
+      }
+      .slick-list{
+        height: 100%;
+        padding: 0;
+        .slick-track{
+          height: 100%;
+          display: flex;
+          align-items: center;
+          .slick-slide{
+            height: 355px;
+            width: 25%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            >div{
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+            }
+          }
+        }
+      }
+    }
+    .center{
+      .slick-center {
+        a{
+          >div{
+            opacity: 1 ;
+            -ms-transform: scale(1.08);
+            transform: scale(1.08);
+            z-index: 100;
+            >div{
+              >div{
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+@media screen and (max-width: 576px) {
+    .SliderContainer{
+    .slick-slider {
+        .slick-arrow {
+        }
+        .slick-next{
+            display: none !important;
+        }
+        .slick-prev{
+            display: none !important;
+        }
+        }
+    }
+}

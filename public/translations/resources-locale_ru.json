@@ -55,6 +55,17 @@
   "Register": "Регистр",
   "ForgottenYourPassword": "Забыли свой пароль?",
   "DontHaveAnAccount": "Не имеют аккаунта?",
-  "KeepMeSignedIn": "Держите меня в системе"
-
+  "KeepMeSignedIn": "Держите меня в системе",
+  "BuyTickets": "Купить Билеты",
+  "Description": "Описание",
+  "Frozen": "Замороженные",
+  "Tickets": "Билеты",
+  "Video": "Видео",
+  "Photo": "Фото",
+  "Recent": "Недавний",
+  "Buzz": "Базз",
+  "Critics": "Критиков",
+  "Reviews": "Отзывы",
+  "Cast": "В ролях",
+  "Creatives": "Творческий"
 }

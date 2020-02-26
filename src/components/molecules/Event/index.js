@@ -1,28 +1,27 @@
 import React from 'react'
 
-// import './style.scss';
-
 import {
-    Paper,
+  Paper
 } from '../../'
 
 import './style.scss'
 
 const Event = ({
-    width,
-    height,
-    src,
-    alt
+  height,
+  src,
+  maxWidth,
+  onClick
 }) => {
-    return (
-        <Paper 
-            className='EventBackgroundImg'
-            style={{
-                width: width,
-                height: height,
-                backgroundImage: `url(${src})` ,
-            }}
-        />
-    );
+  return (
+    <Paper
+      onClick={onClick}
+      className='EventBackgroundImg'
+      style={{
+        maxWidth: maxWidth,
+        height: height,
+        backgroundImage: `url(${src})`
+      }}
+    />
+  )
 }
-export default Event;
+export default Event

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import Styled from './styled';
+import Styled from './styled'
 import Icon from '../Icon'
 
 const Input = ({
@@ -19,13 +19,14 @@ const Input = ({
     margin={margin}
     border={border}
   >
-  <Styled.IconDiv>
-    <Icon name='search' fill={fill}/>
-  </Styled.IconDiv>
+    <Styled.IconDiv>
+      <Icon name='search' fill={fill}/>
+    </Styled.IconDiv>
     <Styled.Input
       placeholder={placeholder}
+      reverse={reverse}
     />
   </Styled.HeaderInputDiv>
-);
+)
 
-export default Input;
+export default Input

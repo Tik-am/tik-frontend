@@ -56,5 +56,17 @@
   "Register": "Register",
   "ForgottenYourPassword": "Forgotten your password?",
   "DontHaveAnAccount": "Don’t have an account?",
-  "KeepMeSignedIn": "Keep me signed in"
+  "KeepMeSignedIn": "Keep me signed in",
+  "BuyTickets": "Buy Tickets",
+  "Description": "Description",
+  "Frozen": "Frozen",
+  "Tickets": "Tickets",
+  "Video": "Video",
+  "Photo": "Photo",
+  "Recent": "Recent",
+  "Buzz": "Buzz",
+  "Critics": "Critics",
+  "Reviews": "Reviews",
+  "Cast": "Cast",
+  "Creatives": "Creatives"
 }

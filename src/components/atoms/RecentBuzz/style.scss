@@ -1,0 +1,39 @@
+.RecentBuzzItem{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: center;
+    .RecentBuzzItemImg{
+        width: 343px;
+    }
+    .RecentBuzzItemDesc{
+        width: 70%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-around;
+        .RecentBuzzItemDescTitle{
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .RecentBuzzItemDescription{
+            font-size: 20px;
+            line-height: 29px;
+            color: #fff;
+            font-weight: lighter;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .RecentBuzzItem{
+        flex-direction: column;
+        .RecentBuzzItemDesc{
+            width: 100%;
+        }
+    }
+}

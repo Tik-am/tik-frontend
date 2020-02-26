@@ -1,22 +1,12 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import {
-  NavLink,
-  withRouter,
-} from 'react-router-dom';
+import React from 'react'
 
 import './style.scss'
 
 import {
-  Image,
-  LogoAndText,
   Paper,
-  Dropdown,
-  FindTicket,
-  Event,
   MainPageImg,
-  Text
-} from '../../components';
+  BackgroundImage
+} from '../../components'
 
 import {
   about,
@@ -36,10 +26,10 @@ const AboutUs = () => {
           ABOUT US
         </Paper>
         <Paper className='flex AboutUsMainImage'>
-          <Image
+          <BackgroundImage
             src={about2}
-            width={1214}
-            height={610}
+            width={'100%'}
+            height={'610px'}
           />
         </Paper>
         <Paper className='flexible vertical AboutUsMainTexts'>
@@ -61,4 +51,4 @@ const AboutUs = () => {
   )
 }
 
-export default (withRouter(AboutUs));
+export default AboutUs

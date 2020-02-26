@@ -1,12 +1,12 @@
-import React from 'react';
-import classnames from 'classnames';
+import React from 'react'
+import classnames from 'classnames'
 
 import {
   Paper,
-  Button,
-} from '../../';
+  Button
+} from '../../'
 
-import './style.scss';
+import './style.scss'
 
 const TextField = ({
   size,
@@ -26,36 +26,36 @@ const TextField = ({
         onChange={onChange}
         value={value}
         className={classnames('Textarea', {
-          [className]: className,
+          [className]: className
         })}
         {...restProps}
       />
 
-    : <Paper flexName="flexible grow" className="TextFieldComponent">
+      : <Paper flexName="flexible grow" className="TextFieldComponent">
         <input
-            onChange={onChange}
-            value={value}
-            className={classnames('TextField', {
-              [className]: className,
-              [size || 'small']: size || 'small',
-              'withRadius': withRadius,
-              'withButton' : withButton,
-            })}
-            {...restProps}
-            style={{
-              autocomplete: "false"
-            }}
-          />
-          { withButton &&
+          onChange={onChange}
+          value={value}
+          className={classnames('TextField', {
+            [className]: className,
+            [size || 'small']: size || 'small',
+            withRadius: withRadius,
+            withButton: withButton
+          })}
+          {...restProps}
+          style={{
+            autocomplete: 'false'
+          }}
+        />
+        { withButton &&
             <Button
               onClick={buttonClick}
               size="medium"
             >
               {buttonText || 'Button'}
             </Button>
-          }
+        }
       </Paper>
   )
-};
+}
 
-export default TextField;
+export default TextField

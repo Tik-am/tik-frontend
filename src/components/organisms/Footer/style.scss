@@ -1,5 +1,5 @@
 .Footer {
-    height: 398px;
+    // height: 398px;
     background-color: #381a57; 
     .textStart{
         margin-top: 66px;
@@ -27,13 +27,14 @@
             ul {
                 display: flex;
                 flex-direction: row;
-                margin: 0 50px;
+                // margin: 0 50px;
                 &:last-child {
                     margin-right: 0;
                 }
                 li {
                     margin: 15px;
                     a {
+                        text-align: center;
                         font-size: 18px;
                         font-weight: 500;
                         font-stretch: normal;
@@ -53,66 +54,37 @@
 }
 
 
-// @media screen and (max-width: 1228px){
-//   .Footer {
-//     .page-content {
-//       padding-right: 20px;
-//     }
-//     &_body {
-//       justify-content: space-around !important;
-//       .subscribe-block {
-//         .social-block {
-//           justify-content: center;
-//         }
-//       }
-//       .info-block {
-//         li {
-//           margin-bottom: 20px;
-//         }
-//       }
-//     }
-//   }
-// }
+@media screen and (max-width: 1220px){
+  .Footer {
+    .page-content {
+      padding-right: 20px;
+    }
+  }
+}
 
-// @media screen and (max-width: 685px){
-//   .Footer  {
-//     &_logo {
-//       justify-content: center;
-//       display: flex;
-//     }
-//     .info-block {
-//       li {
-//         justify-content: center;
-//       }
-//     }
-//     .page-block {
-//       ul {
-//         margin: 0 30px;
-//       }
-//     }
-//     &_text {
-//       justify-content: center !important;
-//     }
-//   }
-// }
+@media screen and (max-width: 768px){
+  .Footer  {
+    .page-content{
+        .page-block {
+            ul{
+                flex-direction: column;
+            }
+        }
+    }
+  }
+}
 
-// @media screen and (max-width: 530px){
-//   .Footer  {
-//     .page-block {
-//       ul {
-//         margin: 0 10px;
-//       }
-//     }
-//     .subscribe-block {
-//       .TextFieldComponent {
-//         .TextField {
-//           height: 45px;
-//         }
-//         .Button {
-//           height: 45px;
-//           font-size: 13px;
-//         }
-//       }
-//     }
-//   }
-// }
+@media screen and (max-width: 576px){
+  .Footer  {
+    .page-content{
+        .page-block {
+            ul{
+                width: 100%;
+                li{
+                    text-align: center;
+                }
+            }
+        }
+    }
+  }
+}

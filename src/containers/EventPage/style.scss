@@ -1,0 +1,381 @@
+.fullPageHeight{
+    height: 100vh;
+}
+.EventDescriptionContainer{
+    margin-top: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    .EventDescriptionMain{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .EventDescriptionPoster{
+            border: 2px solid #fff;
+            width: 244px;
+            height: 356px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 19px;
+        }
+        .EventDescriptionMainInfo{
+            width: 250px;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            max-height: 356px;
+            >div{
+                width: 100%;
+                color: #fff;
+            }
+            .EventDescriptionYear{
+                text-align: end;
+                font-size: 23px;
+                font-weight: 300;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+            }
+            .EventDescriptionName{
+                font-size: 60px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+
+            }
+            .EventDescriptionRating{
+                font-size: 40px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #07caa9;
+            }
+        }
+        .EventDescriptionInfo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 356px;
+            width: 250px;
+            >div{
+                color: #fff;
+            }
+            .EventDescriptionTitle{
+                font-size: 30px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+            }
+            .EventDescriptionTitleItemsInfo{
+                font-size: 20px;
+                font-weight: 300;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.45;
+                letter-spacing: normal;
+            }
+        }
+    }
+    .EventDescriptionMetaDescription{
+        width: 80%;
+        .EventDescriptionMetaDescriptionTitle{
+            font-size: 40px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #fff;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .EventDescriptionMetaDescriptionSpreed{
+            width: 100%;
+            font-size: 20px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.45;
+            letter-spacing: normal;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.TicketsListContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .TicketsListMain{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        .TicketsListContain{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.mediaCarousel{
+    width: 100%;
+    margin-bottom: 138px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+    width: 100%;
+}
+.mediaCarouselText{
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    margin-bottom: 63px;
+    >span{
+        -webkit-text-stroke: 2px #10cab6;
+        font-size: 40px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: rgba(255, 255, 255, 0);
+    }
+}
+
+.RecentBuzzContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .RecentBuzzMain{
+        width: 80%;
+        margin-top: 75px;
+    }
+}
+
+
+.CriticsReviewsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 120px 0;
+    .CriticsReviewsMain{
+        width: 80%;
+        position: relative;
+        margin-top: 100px;
+        .CriticsReviewsMainIcon{
+            position: absolute;
+            z-index: 10;
+            top: -59px;
+            left: -7px;
+        }
+        .CriticsReviewsInfoItem{
+            width: 100%;
+            height: 80%;
+            padding: 0 20px;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-around;
+            .CriticsReviewsInfoName{
+                font-size: 30px;
+                color: #fff;
+                font-weight: bold;
+            }
+            .CriticsReviewsInfoPosition{
+                font-size: 20px;
+                color: #fff;
+                font-weight: lighter;
+            }
+            .CriticsReviewsInfoReview{
+                font-size: 20px;
+                color: #fff;
+                font-weight: lighter;
+                line-height: 29px;
+                max-height: 185px;
+                overflow: scroll;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:650px){
+    .EventDescriptionMain{
+     flex-direction: column;
+     align-items: center;
+     .EventDescriptionPoster{
+        margin: auto;
+     }
+     .EventDescriptionInfo{
+        padding: 30px;
+        height: 130px;
+     }
+     .EventDescriptionMainInfo{
+        padding: 30px;
+        height: 220px;
+     }
+  }
+}
+
+.CriticsReviewsItem{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .CriticsReviewsItemImgContent{
+        width: 539px !important;
+        height: 539px;
+        .CriticsReviewsItemImg{
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    .slick-slider {
+        width: 50%;
+        height: 539px;
+        margin: 0 auto;
+        .slick-dots{
+            bottom: 60px;
+            left: 0;
+            width: auto;
+            margin-left: 20px;
+          > li{
+            height: 1px;
+            background-color: #fff;
+            opacity: 0.35;
+            &.slick-active {
+              opacity: 1;
+            }
+            >button{
+              display: none;
+            }
+          }
+        }
+        .slick-list{
+          height: 100%;
+          padding: 0;
+          .slick-track{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .slick-slide{
+              height: 100%;
+              width: 25%;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              >div{
+                  width: 100%;
+                  height: 100%;
+                  margin: 0 auto;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+@media screen and (max-width:920px){
+    .Main{
+        .CriticsReviewsContainer{
+            .CriticsReviewsMain{
+                .CriticsReviewsItem{
+                    flex-direction: column;
+                    .slick-slider{
+                        width: 100%;
+                        height: auto;
+                        .slick-list{
+                            .slick-track{
+                                .slick-slide{
+                                    >div{
+                                        .CriticsReviewsInfoItem{
+                                            .CriticsReviewsInfoName{
+                                                margin-top: 10px;
+                                            }
+                                            .CriticsReviewsInfoPosition{
+                                                margin: 5px 0 20px 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .slick-dots{
+                            bottom: -30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.CastAndCreativesContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .EventsTypes{
+        width: 100%;
+        height: 32px;
+        margin-bottom: 47px;
+        display: flex;
+        justify-content: center;
+        .EventsTypeItem{
+          margin: 0 33px;
+          &.active{
+            border-bottom: solid 4px #04caa6;
+          }
+          font-size: 20px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #fff;
+          cursor: pointer;
+          &.active{
+            color: #04caa6;
+          }
+        }
+    }
+}
+
+.CastAndCreativesMain{
+    width: 100%;
+    margin-bottom: 138px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}

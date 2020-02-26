@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import Styled from './styled';
+import Styled from './styled'
 
 const Image = ({
   src,
@@ -16,6 +16,6 @@ const Image = ({
     height={height}
     opacity={opacity}
   />
-);
+)
 
-export default Image;
+export default Image

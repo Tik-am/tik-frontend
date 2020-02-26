@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import Styled from './styled';
+import Styled from './styled'
 
 const BackgroundImage = ({
   src,
@@ -13,7 +13,9 @@ const BackgroundImage = ({
     width={width}
     height={height}
     opacity={opacity}
-  />
-);
+  >
+  </Styled.Div>
 
-export default BackgroundImage;
+)
+
+export default BackgroundImage

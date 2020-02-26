@@ -2,27 +2,32 @@ import React from 'react'
 
 import Styled from './styled'
 import {
-    FindTicket
+  FindTicket
 } from '../../'
 
 const MainPageImg = ({
-    width, 
-    height,
-    src,
-    withSearch,
-    gradient
+  width,
+  height,
+  src,
+  withSearch,
+  gradient,
+  opacity,
+  position,
+  top
 }) => {
-    console.log('width:', width)
-    return (
-       <Styled.MainPageImg
-            width={width}
-            height={height}
-            src={src}
-            gradient={gradient}
-       >
-           {withSearch ?  <FindTicket /> : null}
-       </Styled.MainPageImg>
-    )
+  return (
+    <Styled.MainPageImg
+      width={width}
+      height={height}
+      src={src}
+      gradient={gradient}
+      opacity={opacity}
+      position={position}
+      top={top}
+    >
+      {withSearch ? <FindTicket /> : null}
+    </Styled.MainPageImg>
+  )
 }
 
 export default MainPageImg

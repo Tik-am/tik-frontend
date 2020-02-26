@@ -1,0 +1,47 @@
+.Main{
+    min-height: 100vh;
+    background: linear-gradient(to top, #452368 19%, #ef549e 228%);
+    .StarsTitle{
+        margin-top: 200px;
+        z-index: 10;
+        margin-bottom: 82px;
+        font-size: 60px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #04caa6;
+    }
+    .Stars{
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        z-index: 10;
+        margin: 30px 0;
+        .StarsItem{
+            width: 318px;
+            height: 355px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            >span{
+                text-align: center;
+                color: #fff;
+            }
+            .StarsItemName{
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .StarsItemPosition{
+                margin: 20px 0;
+                font-size: 20px;
+            }
+        }
+    }
+}

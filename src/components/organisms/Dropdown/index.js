@@ -1,48 +1,47 @@
-import React, { useState, useRef, useEffect } from 'react';
-import classnames from 'classnames';
+import React, { useState, useRef, useEffect } from 'react'
+import classnames from 'classnames'
 
-import { useTranslator } from '../../../utils/translator';
+import { useTranslator } from '../../../utils/translator'
 
 import {
   Icon,
-  Paper,
-} from '../../';
+  Paper
+} from '../../'
 
-import './style.scss';
+import './style.scss'
 
 const Dropdown = ({
   data,
   onChange,
   selected
 }) => {
+  const { t } = useTranslator()
 
-  const { t } = useTranslator();
+  const [active, setActive] = useState(false)
 
-  const [active, setActive] = useState(false);
+  const wrapperRef = useRef(null)
 
-  const wrapperRef = useRef(null);
-
-  function handleClickOutside(event) {
+  function handleClickOutside (event) {
     if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-      if(!(window.innerWidth < 900)) {
-        setActive(false);
+      if (!(window.innerWidth < 900)) {
+        setActive(false)
       }
     }
   }
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside)
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  });
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  })
 
   return (
     <Paper className={classnames('Dropdown')}>
       <Paper
         onClick={() => setActive(!active)}
-        className={classnames("Dropdown_label", { active })}
-        >
+        className={classnames('Dropdown_label', { active })}
+      >
         {t(selected.label)}
         <Icon name="arrowDown"/>
       </Paper>
@@ -56,11 +55,11 @@ const Dropdown = ({
                   item.value !== selected.value &&
                   <span
                     onClick={() => {
-                      onChange(item);
-                      setActive(false);
+                      onChange(item)
+                      setActive(false)
                     }}
-                    key={item.value}
-                    >
+                    key={item.value.toString()}
+                  >
                     {t(item.label)}
                   </span>
                 ))
@@ -71,6 +70,6 @@ const Dropdown = ({
       }
     </Paper>
   )
-};
+}
 
-export default Dropdown;
+export default Dropdown

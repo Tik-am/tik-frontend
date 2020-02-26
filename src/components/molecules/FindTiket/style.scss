@@ -1,6 +1,7 @@
 
 .FindTicket{
-    // width: 1277px;
+    width: 80%;
+    max-width: 1270px;
     height: 71px;
     border-radius: 35.5px;
     background-color: #fff;
@@ -33,4 +34,37 @@
             color: #000;
         }
     }
+    .FindTicketDataPicker{
+        flex-grow: 1;
+    } 
 }
+.FindTicketMargin{
+    margin-top: 300px;
+    z-index: 10;
+}
+
+
+@media screen and (max-width: 900px) {
+    .FindTicket{
+        flex-direction: column;
+        height: auto;
+        >div:first{
+            width: 100%;
+        }
+        .findTicketButton{
+        }
+        .FindTicketDropdown{
+            width: 90%;
+            padding: 13px;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #757575;
+        }
+        .FindTicketDataPicker{
+            width: 100%;
+            .MuiInput-root{
+                padding: 13px;
+            }
+        }
+    }
+  }

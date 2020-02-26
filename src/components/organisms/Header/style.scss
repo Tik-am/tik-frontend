@@ -3,14 +3,12 @@
 header {
   // height: 70px;
   width: 100%;
-  z-index: 1;
+  z-index: 1000;
   nav {
     height: 70px;
     position: absolute;
     width: 100%;
     background: transparent;
-    // top: 0;
-    // left: 0;
     .Dropdown {
       &_label {
         text-transform: uppercase;
@@ -24,6 +22,7 @@ header {
       }
     }
     .languages {
+      width: 35px;
       top: 26px;
       right: 17px;
       .Dropdown {
@@ -54,8 +53,10 @@ header {
     .page-content {
       position: relative;
       height: 70px;
-      padding: 0 20px;
-      padding-right: 70px;
+      width: 90%;
+      .HeaderSearchContainer{
+        display: none;
+      }
     }
     .logo {
       a {
@@ -74,11 +75,21 @@ header {
       }
     }
   }
+  .HeaderSearchContainer{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    position: relative;
+    .HeaderSearchContainerIcon{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
   .menu-wrapper {
-    height: 34px;
-    right: 19px;
-    top: 20px;
-    position: absolute;
+    height: 25px;
+    position: relative;
     cursor: pointer;
     z-index: 1000;
     &.animate {
@@ -139,7 +150,7 @@ header {
     display: none;
     width: 100%;
     height: 671px;
-    background:  linear-gradient(353deg, #452368 41%, #ef549e 128%);
+    background: linear-gradient(-10deg, #452368 41%, #ef549e 132%);
     &.active{
       display: flex;
     }
@@ -268,3 +279,44 @@ header {
   padding: 10px 0;
   text-align: center;
 }
+
+
+@media screen and (max-width: 1220px) {
+  header {
+    nav{
+      justify-content: center;
+      .page-content {
+        width: 100%;
+        padding: 0 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    nav{
+      .page-content {
+        .HeaderSearchBarSimple{
+          display: none;
+        }
+        .HeaderSearchContainer{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    nav{
+      position: fixed;
+      background-color: #452368d9;
+    }
+    .userLogo{
+      border: none;
+    }
+  }
+}
+

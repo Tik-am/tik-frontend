@@ -1,26 +1,25 @@
 import React from 'react'
 
 import {
-    Paper
+  Paper
 } from '../../'
 
 import './style.scss'
 
 const ViewAll = ({
-    onClick,
-    text
+  onClick,
+  text
 }) => {
-    return (
-        <Paper  
-            className='ViewAllMain' 
-            onClick={onClick}
-        >
-            <Paper  className='ViewAllButton'>
-                {text}
-            </Paper>
-        </Paper>
-    )
+  return (
+    <Paper
+      className='ViewAllMain'
+      onClick={onClick}
+    >
+      <Paper className='ViewAllButton'>
+        {text}
+      </Paper>
+    </Paper>
+  )
 }
 
 export default ViewAll
-

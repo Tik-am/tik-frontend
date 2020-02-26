@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import Styled from './styled';
+import Styled from './styled'
 
 const Text = ({
   color,
@@ -9,16 +9,16 @@ const Text = ({
   onClick,
   style
 }) => {
-  return(
+  return (
     <Styled.Span
       color={color}
       size={size}
       onClick={onClick}
       style={style}
-      >
+    >
       {text}
     </Styled.Span>
   )
-};
+}
 
-export default Text;
+export default Text

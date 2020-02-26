@@ -1,8 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 import Image from '../Image'
 import Paper from '../Paper'
 import Text from '../Text'
+
+import './style.scss'
 
 const LogoAndText = ({
   text,
@@ -13,7 +15,7 @@ const LogoAndText = ({
   color,
   size
 }) => (
-  <Paper flexName="flexible jBetween aCenter ">
+  <Paper flexName="flexible jBetween aCenter LogoAndText">
     <Image
       src={src}
       alt={alt}
@@ -26,6 +28,6 @@ const LogoAndText = ({
       text={text}
     />
   </Paper>
-);
+)
 
-export default LogoAndText;
+export default LogoAndText

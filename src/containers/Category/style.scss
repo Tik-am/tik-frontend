@@ -1,0 +1,57 @@
+.Main{
+    min-height: 100vh;
+    background: linear-gradient(to top, #452368 19%, #ef549e 228%);
+    .EventsTypes{
+        width: 100%;
+        height: 32px;
+        margin-bottom: 47px;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+        .EventsTypeItem{
+            margin: 0 33px;
+            &.active{
+                border-bottom: solid 4px #04caa6;
+            }
+            font-size: 20px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #fff;
+            cursor: pointer;
+            &.active{
+                color: #04caa6;
+            }
+        }
+    }
+    .EventsTypeTitle{
+        margin-top: 300px;
+        z-index: 10;
+        margin-bottom: 82px;
+        font-size: 60px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #04caa6;
+    }
+    .Events{
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        z-index: 10;
+        margin: 30px 0;
+        .EventItem{
+            width: 310px;
+            height: 470px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 10px;
+        }
+    }
+}

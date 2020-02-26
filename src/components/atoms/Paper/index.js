@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react';
-import classnames from 'classnames';
+import React, { forwardRef } from 'react'
+import classnames from 'classnames'
 
 const Paper = forwardRef(({
   style,
@@ -10,7 +10,7 @@ const Paper = forwardRef(({
   ...restProps
 }, ref) => (
   <div
-    className={classnames('Paper', {[flexName]: flexName, [className]: className})}
+    className={classnames('Paper', { [flexName]: flexName, [className]: className })}
     onClick={onClick}
     style={style}
     ref={ref}
@@ -18,6 +18,8 @@ const Paper = forwardRef(({
   >
     {children}
   </div>
-));
+))
 
-export default Paper;
+Paper.displayName = 'Paper'
+
+export default Paper

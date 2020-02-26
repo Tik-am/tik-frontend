@@ -3,9 +3,9 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
-    color: $secondary-black;
+    color: #757575;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -50,11 +50,6 @@ main {
     background-size: cover;
     background-position: center center;
     transform: scale(1.03);
-}
-
-.page-content {
-    max-width: 1280px;
-    margin: 0 auto;
 }
 
 
@@ -146,8 +141,20 @@ main {
         -webkit-box-orient: vertical;
     }
 }
-@media(max-width: 1300px) {
-    .page-content {
-        max-width: 100%;
-    }   
-}
+
+.Spinner {
+    width: 70px;
+    height: 70px;
+    border: 3px solid $main-dark-color;
+    border-radius: 100%;
+    animation: spinnerAnimate 1s infinite;
+    border-top-color:  #fff;
+    margin: 3rem auto;
+    align-self: center;
+  }
+
+
+  @keyframes spinnerAnimate {
+    from { transform: rotate(0) }
+    to { transform: rotate(360deg) }
+  }
