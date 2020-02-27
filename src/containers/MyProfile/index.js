@@ -6,13 +6,14 @@ import {
   BackgroundImage,
   Span,
   TextField,
-  Button
+  Button,
+  Icon
 } from '../../components'
 
 import './style.scss'
 
 import {
-  oval
+  Bitman
 } from '../../assets'
 
 import {
@@ -22,32 +23,11 @@ import {
 
 import eventsData from '../../configs/eventsData'
 
+import Favorite from './Favorite'
+import History from './History'
+import ProfileDetails from './ProfileDetails'
+
 import { useTranslator } from '../../utils/translator'
-
-function TabPanel (props) {
-  const { children, value, index, ...other } = props
-
-  return (
-    <Paper
-      className='MyProfileContent'
-      component="div"
-      role="tabpanel"
-      hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
-      {...other}
-    >
-      {children}
-    </Paper>
-  )
-}
-
-function a11yProps (index) {
-  return {
-    id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`
-  }
-}
 
 const tickets = [
   'concert Bohemia - 5000 amd VIP section',
@@ -57,169 +37,65 @@ const tickets = [
   'cinema Moskva - 5000 amd VIP section'
 ]
 
+const tabs = ['details', 'favorite', 'history']
+
 const MyProfile = () => {
   const { t } = useTranslator()
-  const [value, setValue] = React.useState(0)
-  const [favoritesData, setFavoritesData] = useState(null)
-  const [ticketData, setTicketData] = useState(null)
+  const [activeTab, setActiveTab] = useState('details')
 
-  useEffect(() => {
-    setFavoritesData(null)
-    setTimeout(() => {
-      setFavoritesData(eventsData && eventsData.allEventDataForMainPages.Cinema)
-      setTicketData(tickets)
-    }, 500)
-    window.scrollTo(0, 0)
-  }, [])
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue)
+  const handleActiveTabChange = (item) => {
+    setActiveTab(item)
   }
 
   return (
-    <section className="Main flexible jBetween aCenter" >
-      <Paper className='MyProfileContainer'>
-        <Paper className='MyProfileSettingsContent'>
-          <Paper className='MyProfileSettingsAvatarContent'>
-            <Paper className='MyProfileSettingsAvatarMain'>
-              <BackgroundImage
-                width={'91.4px'}
-                height={'91.4px'}
-                borderRadius={'50%'}
-                src={oval}
-                margin='0'
-              />
-            </Paper>
-            <Span>
-            John Smith
-            </Span>
-            <Span>
-            Bonus 45
-            </Span>
+    <section className="MyProfile flexible jBetween" >
+      <aside >
+        <Paper className='UserInfo flexible vertical jAround aCenter '>
+          <Paper className='UserAvatar flexible jCenter aCenter'>
+            <BackgroundImage
+              width='90%'
+              height='90%'
+              borderRadius='50%'
+              src={Bitman}
+            />
+            <Paper className='UserAvatarActive' />
           </Paper>
-          <Paper className='MyProfileSettingsTabsMain'>
-            <Tabs
-              orientation="vertical"
-              variant="scrollable"
-              value={value}
-              onChange={handleChange}
-              className='MyProfileSettingsTabs'
-            >
-              <Tab label="Profile details" className={`MyProfileSettingsTabItem ${value === 0 ? 'active' : ''}`} {...a11yProps(0)} />
-              <Tab label="Favorite" className={`MyProfileSettingsTabItem ${value === 1 ? 'active' : ''}`} {...a11yProps(1)} />
-              <Tab label="History" className={`MyProfileSettingsTabItem ${value === 2 ? 'active' : ''}`} {...a11yProps(2)} />
-            </Tabs>
+          <Span className='UserInfoText'>
+          John Smith
+          </Span>
+          <Span className='UserInfoText'>
+          Balance <Span>40.000 AMD</Span>
+          </Span>
+          <Span className='UserInfoText'>
+          Bonus <Span>45</Span>
+          </Span>
+        </Paper>
+        <Paper className='UserInfoList'/>
+        <Paper className='UserTabs flexible aEnd vertical'>
+          <Paper
+            onClick={() => handleActiveTabChange('details')}
+            className={`UserTabItem flexible jStart ${`${activeTab === 'details' ? 'active' : ''}`}`}>
+            <Icon name='user' width={20} height={20}/>
+            <Span className='UserTabItemText'>Profile details</Span>
+          </Paper>
+          <Paper
+            onClick={() => handleActiveTabChange('favorite')}
+            className={`UserTabItem flexible jStart ${`${activeTab === 'favorite' ? 'active' : ''}`}`}>
+            <Icon name='heart' width={20} height={20}/>
+            <Span className='UserTabItemText'>Favorite</Span>
+          </Paper>
+          <Paper
+            onClick={() => handleActiveTabChange('history')}
+            className={`UserTabItem flexible jStart ${`${activeTab === 'history' ? 'active' : ''}`}`}>
+            <Icon name='history' width={20} height={20}/>
+            <Span className='UserTabItemText'>History</Span>
           </Paper>
         </Paper>
-        <TabPanel value={value} index={0}>
-          <Paper className='MyProfileDetails'>
-            <Paper className='MyProfileTitle'>
-            My Profile
-            </Paper>
-            <Paper className='MyProfileProperties'>
-              <Paper className='MyProfilePropertiesImg'>
-                <Paper className='MyProfilePropertiesImage'>
-                  <BackgroundImage
-                    width={'150px'}
-                    height={'150px'}
-                    borderRadius={'50%'}
-                    src={oval}
-                    margin='0'
-                  />
-
-                </Paper>
-                <Paper className='MyProfilePropertiesIcon'>
-              Replace
-                </Paper>
-
-              </Paper>
-              <Paper className='MyProfilePropertiesInfo'>
-                <TextField
-                  placeholder={t('_Name_')}
-                  size="medium"
-                />
-                <TextField
-                  placeholder={t('First Name')}
-                  size="medium"
-                />
-                <TextField
-                  placeholder={t('Last Name')}
-                  size="medium"
-                />
-                <TextField
-                  placeholder={t('_Email_')}
-                  type='email'
-                  size="medium"
-                />
-                <TextField
-                  placeholder={t('_Phone_')}
-                  type='number'
-                  size="medium"
-                />
-                <Button
-                  text='Save Changes'
-                  color='#fff'
-                  background='#04caa6'
-                  borderRadius='27'
-                  padding='13'
-                />
-              </Paper>
-            </Paper>
-          </Paper>
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <Paper className='Events'>
-            {favoritesData && favoritesData.map((item) => (
-              <NavLink to={'/events/' + item.id} key={item.id.toString()}>
-                <Paper
-                  className='EventItem'
-                  style={{
-                    backgroundImage: `url(${item.src})`,
-                    width: '230px',
-                    height: '350px'
-                  }}
-                />
-              </NavLink>
-            ))}
-          </Paper>
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <Paper className='History'>
-            <Paper className='HistoryContent'>
-              <Paper className='eventsHistory'>
-                <Paper className='eventsHistoryTitle'>
-                    My History
-                </Paper>
-                <Paper className='Events'>
-                  {favoritesData && favoritesData.slice(0, 4).map((item) => (
-                    <NavLink to={'/events/' + item.id} key={item.id.toString()}>
-                      <Paper
-                        className='EventItem'
-                        style={{
-                          backgroundImage: `url(${item.src})`,
-                          width: '230px',
-                          height: '350px'
-                        }}
-                      />
-                    </NavLink>
-                  ))}
-                </Paper>
-              </Paper>
-              <Paper className='TicketHistory'>
-                <Paper className='TicketHistoryTitle'>
-                tikets
-                </Paper>
-                <Paper className='TicketHistories'>
-                  {ticketData && ticketData.map((item) => (
-                    <Paper className='ticketHistoryItem'>
-                      {item}
-                    </Paper>
-                  ))}
-                </Paper>
-              </Paper>
-            </Paper>
-          </Paper>
-        </TabPanel>
+      </aside>
+      <Paper className='MyProfileContent flexible jCenter'>
+        <ProfileDetails className={`${activeTab === 'details' ? 'active' : ''}`} />
+        <Favorite className={`${activeTab === 'favorite' ? 'active' : ''}`} />
+        <History className={`${activeTab === 'history' ? 'active' : ''}`} />
       </Paper>
     </section>
   )

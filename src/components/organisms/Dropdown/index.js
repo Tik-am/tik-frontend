@@ -13,7 +13,8 @@ import './style.scss'
 const Dropdown = ({
   data,
   onChange,
-  selected
+  selected,
+  color
 }) => {
   const { t } = useTranslator()
 
@@ -37,10 +38,15 @@ const Dropdown = ({
   })
 
   return (
-    <Paper className={classnames('Dropdown')}>
+    <Paper className={classnames('Dropdown')} style={{
+      color: color || '#fff'
+    }}>
       <Paper
         onClick={() => setActive(!active)}
         className={classnames('Dropdown_label', { active })}
+        style={{
+          color: color || '#fff'
+        }}
       >
         {t(selected.label)}
         <Icon name="arrowDown"/>

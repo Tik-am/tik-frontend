@@ -5,7 +5,6 @@
   height: 2px;
   opacity: 0.42;
   border: none;
-  border-bottom: solid 1px #979797;
   color: $secondary-black;
   background-color: $secondary-white;
   font-size: 15px;
@@ -17,6 +16,13 @@
 
 .TextFieldComponent {
   position: relative;
+  .TextFieldComponentInput{
+    margin-top:18px;
+    border-radius: 5px;
+    border: solid 1px #979797;
+    opacity: 1;
+  }
+  
   .TextField {
     @extend .TextField_Style;
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -45,8 +51,9 @@
       height: 30px;
     }
     &.medium {
-      height: 60px;
-      font-size: 18px;
+      height: 46px;
+      font-size: 15px;
+      color: #000;
       &.withRadius {
         border-radius: 60px;
       }

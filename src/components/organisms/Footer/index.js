@@ -23,7 +23,7 @@ const Footer = () => {
         </Paper>
         <Paper flexName="flexible jCenter" className="page-block">
           <ul>
-            <li><NavLink to="/">{t('_AboutUs_')}</NavLink></li>
+            <li><NavLink to="/about-us">{t('_AboutUs_')}</NavLink></li>
             <li><NavLink to="/contact-us">{t('_ContactUs_')}</NavLink></li>
             <li><NavLink to="/">{t('_VisitUs_')}</NavLink></li>
             <li><NavLink to="/]">{t('_News_')}</NavLink></li>

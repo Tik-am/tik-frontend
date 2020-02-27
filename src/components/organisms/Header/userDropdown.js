@@ -16,7 +16,7 @@ import {
 import { useTranslator } from '../../../utils/translator'
 
 const UserDropdown = ({
-  data
+  color
 }) => {
   const { t } = useTranslator()
 
@@ -52,7 +52,7 @@ const UserDropdown = ({
       onClick={() => setActive(!active)}
     >
       <Paper className='flexible jCenter aCenter userDropdown'>
-        <Icon name='user' width={40} height={40}/>
+        <Icon name='user' width={40} height={40} fill={color}/>
       </Paper>
       {active &&
         <Paper className="Dropdown_content">

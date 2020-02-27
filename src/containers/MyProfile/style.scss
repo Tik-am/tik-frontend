@@ -1,136 +1,252 @@
-.Main{
-    height: auto !important;
-    min-height: auto !important;
-    .MyProfileContainer{
-        background: #fff;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        >div{
-            margin-top: 130px;
-        }
-    }
-    .MyProfileSettingsContent{
-        background-image: linear-gradient(351deg, #452368 -24%, #ef549e 162%);
-        border-top-right-radius: 32px;
+.MyProfile{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    padding-top: 200px;
+    aside{
         width: 277px;
-        .MyProfileSettingsAvatarContent{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
-            .MyProfileSettingsAvatarMain{
+        border-top-right-radius: 32px;
+        background-image: linear-gradient(358deg, #452368 0%, #ef549e 100%);
+        .UserInfo{
+            height: 255px;
+            .UserAvatar{
                 width: 110px;
                 height: 110px;
                 border: solid 2px #fff;
                 border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                position: relative;
+                .UserAvatarActive{
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    border: solid 2px #8e387f;
+                    background-image: linear-gradient(113deg, #00b9ff 7%, #03f4c2 85%);
+                    position: absolute;
+                    top: 7px;
+                    right: 7px;
+                }
             }
-            >span{
+            .UserInfoText{
                 font-size: 16px;
                 font-weight: bold;
                 color: #fff;
-                margin: 8px;
-            }
-        }
-        .MyProfileSettingsTabs{
-            align-items: flex-end;
-            .MyProfileSettingsTabItem{
-                padding: 12px;
-                border-top-left-radius: 100px;
-                border-bottom-left-radius: 100px;
-                opacity: 1;
                 >span{
                     font-size: 16px;
-                    font-weight: normal;
+                    font-weight: lighter;
                     color: #fff;
-                    text-transform: capitalize;
                 }
-                &.active{
+            }
+        }
+        .UserInfoList{
+            width: 100%;
+            height: 1px;
+            opacity: 0.13;
+            border: solid 1px #fff;          
+        }
+        .UserTabs{
+            width: 277px;
+            margin-top: 25px;
+            .UserTabItem{
+                padding: 15px;
+                width: 245px;
+                cursor: pointer;
+                .Icon{
+                    margin: 0 16px 0 35px;
+                }
+                &.active {
+                    color: #000;
                     background-color: #fff;
-                    >span{
-                        font-size: 16px;
-                        font-weight: bold;
+                    border-top-left-radius: 100px;
+                    border-bottom-left-radius: 100px;
+                    .Icon {
+                      svg {
+                        fill: #452368;
+                        stroke-width: 2;
+                      }
+                    }
+                    .UserTabItemText{
                         color: #000;
+                        font-weight: bold;
+                    }
+                  }
+                .UserTabItemText{
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .MyProfileContent{
+        flex-grow: 1
+    }
+    .MyProfileContent{
+        .Favorite{
+            display: none;
+            width: 80%;
+            align-content: flex-start;
+            margin-bottom: 20px;
+            &.active{
+                display: flex;
+            }
+            .FavoriteTitle{
+                font-size: 25px;
+                font-weight: bold;
+                color: #000;
+                margin-bottom: 50px;
+                width: 100%;
+                margin-left: 10px;
+            }
+            .EventItem{
+                width: 230px;
+                height: 350px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 10px;
+            }
+        }
+        .History{
+            width: 80%;
+            display: none;
+            align-content: flex-start;
+            margin-bottom: 20px;
+            &.active{
+                display: flex;
+            }
+            .eventsHistory{
+                width: 100%;
+                font-size: 25px;
+                font-weight: bold;
+                color: #000;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+        }
+        .MyProfileDetails{
+            display: none;
+            width: 80%;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 30px;
+            margin: 0 auto;
+            &.active{
+                display: flex;
+            }
+            .MyProfileTitle{
+                width: 100%;
+                font-size: 25px;
+                font-weight: bold;
+                color: #000;
+                margin-bottom: 34px;
+            }
+            .MyProfileProperties{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin-bottom: 180px;
+                .MyProfilePropertiesImg{
+                    display: flex;
+                    flex-direction: column;
+                    border-right: solid 1px #979797;
+                    .MyProfilePropertiesImage{
+                        width: 185px;
+                        height: 185px;
+                    }
+                    .MyProfilePropertiesIcon{
+                        .Icon{
+                            width: 23px;
+                            height: 16px;
+                            margin-left: 10px;
+                        }
+                        >span{
+                            color: #04caa6;
+                            font-size: 13px;
+                        }
+                    }
+                }
+                .MyProfilePropertiesInfo{
+                    width: 70%;
+                    .TextFieldComponent{
+                        width: 280px;
+                        margin-bottom: 36px;
                     }
                 }
             }
         }
     }
+    
 }
-
-
-.MyProfileDetails{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 30px;
-    margin: 0 auto;
-    .MyProfileTitle{
-        font-size: 25px;
-        font-weight: bold;
-        color: #000;
-    }
-    .MyProfileProperties{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        .MyProfilePropertiesImg{
-            display: flex;
-            flex-direction: column;
-            border-right: solid 1px #979797;
-            .MyProfilePropertiesImage{
-                width: 185px;
-                height: 185px;
-            }
-        }
-    }
-}
-
-.MyProfileContent{
-    width: 100%;
-}
-
-
-.History{
-    display: flex;
-    justify-content: center;
-    .HistoryContent{
-        width: 80%;
-        justify-content: center;
-        .Events{
-            width: 100%;
-        }
-    }
-}
-
-.TicketHistory{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    .TicketHistoryTitle{
-        font-size: 25px;
-        font-weight: bold;
-        color: #000000;
-        text-transform: uppercase;
-    }
-}
-.ticketHistoryItem{
-    font-size: 18px;
-    font-weight: 300;
-    color: #000;
-    margin: 10px 0;
-}
-
 .eventsHistoryTitle{
     font-size: 25px;
     font-weight: bold;
     color: #000;
+    margin-bottom: 50px;
+    width: 100%;
+    margin-left: 10px;
+}
+.TicketHistories{
+    margin-left: 10px;
+    .ticketHistoryItem{
+        font-size: 18px;
+        font-weight: 300;
+        color: #000;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .MyProfile{
+        aside{
+            .UserInfo{
+                height: 120px;
+                .UserAvatar{
+                    width: 80px;
+                    height: 80px;
+                }
+                .UserInfoText{
+                    display: none;
+                }
+            }
+            .UserTabs{
+                width: 100px;
+                .UserTabItem{
+                    width: auto;
+                    .UserTabItemText{
+                        display: none;
+                    }
+                    .Icon{
+                        margin: 0 16px 0 16px;
+                    }
+                }
+            }
+        }
+        .MyProfileContent{
+            .MyProfileDetails{
+                padding: 0 ;
+                margin: 0;
+                .MyProfileProperties{
+                    .MyProfilePropertiesImg{
+                        border-bottom: solid 1px #979797;
+                        border-right: none;
+                        margin-bottom: 20px;
+                        .MyProfilePropertiesImage{
+                            display: flex;
+                            justify-content: center;
+                        }
+                        .MyProfilePropertiesIcon{
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .MyProfilePropertiesInfo{
+                        width: 80%;
+                    }
+                }
+            }
+        } 
+    }
 }

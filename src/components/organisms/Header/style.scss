@@ -101,16 +101,45 @@ header {
   .hamburger-menu:before {
     height: $bar-height;
     border-radius: 5px;
-    background-color: #fff;
   }
+  .hamburger-menu:after,
+  .hamburger-menu:before {
+    background-color: inherit;
+  }
+
   .hamburger-menu {
     width: 28px;
     position: relative;
     transform: translateY($bar-spacing);
     transition: all 0ms 300ms;
+    background-color: #fff;
     &.animate {
-        background: rgba(255, 255, 255, 0);
+      background: rgba(255, 255, 255, 0);
+      &:before{
+        background-color: #fff;
       }
+      &:after{
+        background-color: #fff;
+      }
+    }
+    &.dark{
+      background-color: #000;
+      &.animate {
+        background: rgba(0, 0, 0, 0);
+        &:before{
+          background-color: #fff;
+        }
+        &:after{
+          background-color: #fff;
+        }
+      }
+      &:before{
+        background-color: #000;
+      }
+      &:after{
+        background-color: #000;
+      }
+    }
   }
 
   .hamburger-menu:before {
@@ -264,6 +293,14 @@ header {
         color: #4a256a;
         border-bottom-color: linear-gradient(to left, #452368, #ef549e -10%);
         border-bottom: solid 3px;
+      }
+    }
+  }
+  .TextFieldComponent{
+    .TextFieldComponentInput{
+      border: none;
+      >input{
+        border-bottom: solid 1px #979797;
       }
     }
   }

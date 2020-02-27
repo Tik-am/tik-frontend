@@ -18,6 +18,7 @@ const TextField = ({
   buttonClick,
   buttonText,
   withRadius,
+  label,
   ...restProps
 }) => {
   return (
@@ -31,21 +32,26 @@ const TextField = ({
         {...restProps}
       />
 
-      : <Paper flexName="flexible grow" className="TextFieldComponent">
-        <input
-          onChange={onChange}
-          value={value}
-          className={classnames('TextField', {
-            [className]: className,
-            [size || 'small']: size || 'small',
-            withRadius: withRadius,
-            withButton: withButton
-          })}
-          {...restProps}
-          style={{
-            autocomplete: 'false'
-          }}
-        />
+      : <Paper flexName="flexible vertical" className="TextFieldComponent">
+        <label>
+          {label}
+        </label>
+        <Paper className="TextFieldComponentInput">
+          <input
+            onChange={onChange}
+            value={value}
+            className={classnames('TextField', {
+              [className]: className,
+              [size || 'small']: size || 'small',
+              withRadius: withRadius,
+              withButton: withButton
+            })}
+            {...restProps}
+            style={{
+              autocomplete: 'false'
+            }}
+          />
+        </Paper>
         { withButton &&
             <Button
               onClick={buttonClick}

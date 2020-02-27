@@ -2,8 +2,8 @@ import BigLogo from './asset-1-2-x@3x.png'
 import MiddleLogo from './asset-1-2-x@2x.png'
 import SmallLogo from './asset-1-2-x.png'
 import gifCardLogo from './gift-solid.png'
-import calendarSmallLogo from './calendar-alt-solid.png'
-import phoneSmallLogo from './shape.png'
+import calendarSmallLogo from './calendar-alt-solid@2x.png'
+import phoneSmallLogo from './phone.png'
 import fearPNG from './bitmap-copy-9.png'
 import terrorPNG from './group-25.png'
 import lodgePNG from './bitmap-copy-11.png'
@@ -27,6 +27,10 @@ import cirk from './cirk.jpg'
 import home1 from './home1.png'
 import about from './about.jpg'
 import about2 from './about2.png'
+import mainLogoBalck from './mainLogoBalck.png'
+
+import gifCardBlackLogo from './Ghift-black.png'
+import calendarSmallBlackLogo from './Data-black.png'
 
 import angelinaJolie from './actors/anjelinaJoli.jpg'
 import bredPit from './actors/bredPit.jpg'
@@ -68,6 +72,7 @@ import masterCard from './Seats/master-card.png'
 import visa from './Seats/visa.png'
 
 import oval from './oval.jpg'
+import Bitman from './Bitmap.png'
 
 export {
   BigLogo,
@@ -132,5 +137,9 @@ export {
   delivery,
   masterCard,
   visa,
-  oval
+  oval,
+  Bitman,
+  gifCardBlackLogo,
+  calendarSmallBlackLogo,
+  mainLogoBalck
 }

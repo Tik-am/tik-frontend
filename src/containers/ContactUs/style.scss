@@ -31,6 +31,14 @@
           width: 100%;
           margin-top: 20px;
         }
+        .TextFieldComponent{
+          .TextFieldComponentInput{
+            border: none;
+            >input{
+              border-bottom: solid 1px #979797;
+            }
+          }
+        }
       }
       .ContactUsPreferredMethod{
        width: 80%; 

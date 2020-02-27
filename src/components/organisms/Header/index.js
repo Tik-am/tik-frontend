@@ -22,7 +22,10 @@ import {
   SmallLogo,
   gifCardLogo,
   calendarSmallLogo,
-  phoneSmallLogo
+  phoneSmallLogo,
+  gifCardBlackLogo,
+  calendarSmallBlackLogo,
+  mainLogoBalck
 } from '../../../assets'
 
 import UserDropdown from './userDropdown'
@@ -35,7 +38,11 @@ const Header = ({
   location
 }) => {
   const { t, setLanguage } = useTranslator()
+  let isHeaderDark = false
 
+  if (location.pathname.indexOf('my-profile') >= 0) {
+    isHeaderDark = true
+  }
   const languages = [
     { label: 'EN', value: 'en' },
     { label: 'AM', value: 'am' },
@@ -87,7 +94,7 @@ const Header = ({
   const guestDropdown = () => (
     <Paper flexName="flexible aCenter jCenter userLogo " onClick={handleOpen} >
       <Paper className='flexible jCenter aCenter userLogoIcon'>
-        <Icon name='user' width={40} height={40}/>
+        <Icon name='user' width={40} height={40} fill={isHeaderDark ? '#000' : '#fff'}/>
       </Paper>
       <Modal
         aria-labelledby="simple-modal-title"
@@ -106,7 +113,7 @@ const Header = ({
         <Paper flexName="flexible jBetween aCenter" className='page-content'>
           <NavLink to="/">
             <Image
-              src={SmallLogo}
+              src={isHeaderDark ? mainLogoBalck : SmallLogo}
               alt='Logo'
               width={'133px'}
               height={'43.8px'}
@@ -116,39 +123,40 @@ const Header = ({
             text='Gift Cards'
             width={'22px'}
             height={'19px'}
-            color='#fff'
+            color={isHeaderDark ? '#000' : '#fff'}
             size={16}
-            src={gifCardLogo}
+            src={isHeaderDark ? gifCardBlackLogo : gifCardLogo}
           />
           <LogoAndText
             text='Tickets by Date'
             width={'18px'}
             height={'18px'}
-            color='#fff'
+            color={isHeaderDark ? '#000' : '#fff'}
             size={16}
-            src={calendarSmallLogo}
+            src={isHeaderDark ? calendarSmallBlackLogo : calendarSmallLogo}
           />
           <LogoAndText
             text='+37494000000'
             width={'12px'}
             height={'20px'}
-            color='#fff'
+            color={isHeaderDark ? '#000' : '#fff'}
             size={16}
             src={phoneSmallLogo}
           />
           <Paper className='HeaderSearchBarSimple'>
             <Input
               placeholder='Search'
-              border='solid 1px white'
+              border={isHeaderDark ? 'solid 1px #000' : 'solid 1px white'}
+              fill={isHeaderDark ? '#000' : '#fff'}
             />
           </Paper>
           <Paper className='HeaderSearchContainer'>
             <Paper className='HeaderSearchContainerIcon'>
-              <Icon name='search' width={30} height={30}/>
+              <Icon name='search' width={30} height={30} fill={isHeaderDark ? '#000' : '#fff'}/>
             </Paper>
           </Paper>
           <Paper className='avatar'>
-            {isAuth ? <UserDropdown /> : guestDropdown() }
+            {isAuth ? <UserDropdown color={isHeaderDark ? '#000' : '#fff'}/> : guestDropdown() }
           </Paper>
 
           <Paper className="languages">
@@ -156,13 +164,22 @@ const Header = ({
               data={languages}
               selected={activeLang}
               onChange={handleActiveLang}
+              color={isHeaderDark ? '#000' : '#fff'}
             />
           </Paper>
-          <Paper className="menu-wrapper" onClick={() => setActive(!active)}>
-            <Paper className={`hamburger-menu ${active ? 'animate' : ''}`}></Paper>
+          <Paper
+            className="menu-wrapper"
+            onClick={() => setActive(!active)}
+          >
+            <Paper
+              className={`hamburger-menu ${active ? 'animate' : ''} ${isHeaderDark ? 'dark' : ''}`}
+            >
+            </Paper>
           </Paper>
         </Paper>
-        <Paper flexName="flexible aCenter jCenter animated bounceInDown" className={`headerList ${active ? 'active' : ''}`}>
+        <Paper
+          flexName="flexible aCenter jCenter animated bounceInDown"
+          className={`headerList ${active ? 'active' : ''}`}>
           <ul className="nav-list">
             <li>
               <NavLink
