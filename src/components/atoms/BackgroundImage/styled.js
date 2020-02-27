@@ -7,6 +7,7 @@ export default {
         opacity: ${({ opacity }) => opacity || 1};
         width: ${({ width }) => width || '284px'};
         height: ${({ height }) => height || '78px'};
+        border-radius: ${({ borderRadius }) => borderRadius || ''};
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

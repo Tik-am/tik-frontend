@@ -59,6 +59,16 @@ import CastAndCreative6 from './castAndCreative/114847-16.jpg'
 import CastAndCreative7 from './castAndCreative/114848-15.jpg'
 import CastAndCreative8 from './castAndCreative/116543-15.jpg'
 
+import Camerayin from './Seats/Camerayin.png'
+import SeatIcon from './Seats/icon.png'
+import arca from './Seats/arca.png'
+import cash from './Seats/cash.png'
+import delivery from './Seats/dilivery.png'
+import masterCard from './Seats/master-card.png'
+import visa from './Seats/visa.png'
+
+import oval from './oval.jpg'
+
 export {
   BigLogo,
   MiddleLogo,
@@ -114,5 +124,13 @@ export {
   CastAndCreative5,
   CastAndCreative6,
   CastAndCreative7,
-  CastAndCreative8
+  CastAndCreative8,
+  Camerayin,
+  SeatIcon,
+  arca,
+  cash,
+  delivery,
+  masterCard,
+  visa,
+  oval
 }

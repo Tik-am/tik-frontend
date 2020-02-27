@@ -16,6 +16,10 @@ import Ticket from './atoms/Ticket'
 import Span from './atoms/Span'
 import RecentBuzz from './atoms/RecentBuzz'
 import TwoColorWords from './atoms/TwoColorWords'
+import Stepper from './atoms/Stepper'
+import ChooseTicketsSeats from './atoms/ChooseTicketsSeats'
+import ChoosePayment from './atoms/ChoosePayment'
+import TicketOrderInfoItem from './atoms/TicketOrderInfoItem'
 
 // // Molecules
 import Event from './molecules/Event'
@@ -29,6 +33,7 @@ import Actors from './molecules/ActorsCarousel'
 import Header from './organisms/Header'
 import Footer from './organisms/Footer'
 import Dropdown from './organisms/Dropdown'
+import DropdownLink from './organisms/DropdownLink'
 
 export {
   Text,
@@ -56,5 +61,10 @@ export {
   MainCarousel,
   RecentBuzz,
   TwoColorWords,
-  Actors
+  Actors,
+  Stepper,
+  ChooseTicketsSeats,
+  ChoosePayment,
+  TicketOrderInfoItem,
+  DropdownLink
 }

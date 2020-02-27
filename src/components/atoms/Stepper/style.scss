@@ -1,0 +1,33 @@
+.StepperContainer{
+    background-color: #f5f6fa;
+    border-radius: 19px;
+    width: 80%;
+    max-width: 1120px;
+    height: 95% !important;
+    overflow: scroll;
+    height: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;  
+    .Steppers{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        >div{
+            margin: 20px 0;
+        }
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .StepperContainer{
+        .Steppers {
+            >div{
+                margin: 10px 0;
+            }
+        }
+    }
+}

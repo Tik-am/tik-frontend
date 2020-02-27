@@ -6,13 +6,15 @@ const BackgroundImage = ({
   src,
   width,
   height,
-  opacity
+  opacity,
+  borderRadius
 }) => (
   <Styled.Div
     src={src}
     width={width}
     height={height}
     opacity={opacity}
+    borderRadius={borderRadius}
   >
   </Styled.Div>
 

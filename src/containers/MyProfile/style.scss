@@ -1,0 +1,136 @@
+.Main{
+    height: auto !important;
+    min-height: auto !important;
+    .MyProfileContainer{
+        background: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        >div{
+            margin-top: 130px;
+        }
+    }
+    .MyProfileSettingsContent{
+        background-image: linear-gradient(351deg, #452368 -24%, #ef549e 162%);
+        border-top-right-radius: 32px;
+        width: 277px;
+        .MyProfileSettingsAvatarContent{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            .MyProfileSettingsAvatarMain{
+                width: 110px;
+                height: 110px;
+                border: solid 2px #fff;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            >span{
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+                margin: 8px;
+            }
+        }
+        .MyProfileSettingsTabs{
+            align-items: flex-end;
+            .MyProfileSettingsTabItem{
+                padding: 12px;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                opacity: 1;
+                >span{
+                    font-size: 16px;
+                    font-weight: normal;
+                    color: #fff;
+                    text-transform: capitalize;
+                }
+                &.active{
+                    background-color: #fff;
+                    >span{
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.MyProfileDetails{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 30px;
+    margin: 0 auto;
+    .MyProfileTitle{
+        font-size: 25px;
+        font-weight: bold;
+        color: #000;
+    }
+    .MyProfileProperties{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .MyProfilePropertiesImg{
+            display: flex;
+            flex-direction: column;
+            border-right: solid 1px #979797;
+            .MyProfilePropertiesImage{
+                width: 185px;
+                height: 185px;
+            }
+        }
+    }
+}
+
+.MyProfileContent{
+    width: 100%;
+}
+
+
+.History{
+    display: flex;
+    justify-content: center;
+    .HistoryContent{
+        width: 80%;
+        justify-content: center;
+        .Events{
+            width: 100%;
+        }
+    }
+}
+
+.TicketHistory{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    .TicketHistoryTitle{
+        font-size: 25px;
+        font-weight: bold;
+        color: #000000;
+        text-transform: uppercase;
+    }
+}
+.ticketHistoryItem{
+    font-size: 18px;
+    font-weight: 300;
+    color: #000;
+    margin: 10px 0;
+}
+
+.eventsHistoryTitle{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+}

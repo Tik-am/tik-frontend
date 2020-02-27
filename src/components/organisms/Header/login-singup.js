@@ -12,7 +12,7 @@ import './style.scss'
 import { useTranslator } from '../../../utils/translator'
 
 const Login = forwardRef(({
-  data
+  onClick
 }, ref) => {
   const [activeType, setActiveType] = useState('login')
 
@@ -42,6 +42,7 @@ const Login = forwardRef(({
         text={t('_Enter_')}
         margin='20px 0 0 0'
         color='#fff'
+        onClick={onClick}
         background='linear-gradient(90deg,#452368 18%,#ef549e 100%)'
       />
       <Paper className='line loginTexts'>
@@ -93,6 +94,7 @@ const Login = forwardRef(({
         text={t('_Enter_')}
         margin='20px 0 0 0'
         color='#fff'
+        onClick={onClick}
         background='linear-gradient(90deg,#452368 18%,#ef549e 100%)'
       />
       <Paper className='line loginTexts'>

@@ -13,7 +13,8 @@ import {
   EventPage,
   StarPage,
   Category,
-  Stars
+  Stars,
+  MyProfile
 } from './containers'
 
 import {
@@ -40,6 +41,7 @@ const App = () => {
           <Route exact path="/stars" component={Stars} />
           <Route path="/stars/:id" component={StarPage} />
           <Route path="/category/:type" component={Category} />
+          <Route path="/my-profile" component={MyProfile} />
         </Switch>
       </main>
       <Footer/>

@@ -5,6 +5,7 @@ import EventPage from './EventPage'
 import StarPage from './StarPage'
 import Category from './Category'
 import Stars from './Stars'
+import MyProfile from './MyProfile'
 
 export {
   Main,
@@ -13,5 +14,6 @@ export {
   EventPage,
   StarPage,
   Category,
-  Stars
+  Stars,
+  MyProfile
 }

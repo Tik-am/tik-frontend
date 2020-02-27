@@ -4,7 +4,8 @@ import moment from 'moment'
 import Styled from './styled'
 
 const Ticket = ({
-  date
+  date,
+  onClick
 }) => {
   return (
     <Styled.Main>
@@ -16,7 +17,8 @@ const Ticket = ({
           {moment(date).format('MMM D').toLowerCase()}
         </Styled.Month>
       </Styled.Data>
-      <Styled.Time >
+      <Styled.Time
+        onClick={onClick}>
         {moment(date).format('HH:mm')}
       </Styled.Time>
     </Styled.Main>

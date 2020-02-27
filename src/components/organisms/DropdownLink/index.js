@@ -1,4 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
+import classnames from 'classnames'
+
+import { useTranslator } from '../../../utils/translator'
+
+import {
+  Icon,
+  Paper
+} from '../..'
+
 import {
   NavLink,
   withRouter
@@ -6,22 +15,14 @@ import {
 
 import './style.scss'
 
-import {
-  Paper,
-  Icon,
-  Span,
-  DropdownLink
-} from '../../'
-
-import { useTranslator } from '../../../utils/translator'
-
-const UserDropdown = ({
+const DropdownLink = ({
   data
 }) => {
   const { t } = useTranslator()
 
-  const wrapperRef = useRef(null)
   const [active, setActive] = useState(false)
+
+  const wrapperRef = useRef(null)
 
   function handleClickOutside (event) {
     if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
@@ -38,35 +39,28 @@ const UserDropdown = ({
     }
   })
 
-  const userProfileData = [
-    {
-      label: 'Profile Details',
-      url: '/my-profile'
-    }
-  ]
-
   return (
-    <Paper
-      className='flexible vertical userDropdownIcon'
-      ref={wrapperRef}
-      onClick={() => setActive(!active)}
-    >
-      <Paper className='flexible jCenter aCenter userDropdown'>
-        <Icon name='user' width={40} height={40}/>
+    <Paper className={classnames('Dropdown')}>
+      <Paper
+        onClick={() => setActive(!active)}
+        className={classnames('Dropdown_label', { active })}
+      >
+        {/* {t(selected.label)} */}
+        <Icon name="arrowDown"/>
       </Paper>
       {active &&
         <Paper className="Dropdown_content">
           <Paper flexName="flexible vertical">
             <Paper className="dropdown-list" ref={wrapperRef}>
               {
-                userProfileData.map((item) => (
+                data.map((item) => (
                   <NavLink
-                    key={item.value}
+                    key={item.value.toString()}
                     to={item.url}
                   >
-                    <Span>
+                    <span>
                       {t(item.label)}
-                    </Span>
+                    </span>
                   </NavLink>
                 ))
               }
@@ -78,4 +72,4 @@ const UserDropdown = ({
   )
 }
 
-export default withRouter(UserDropdown)
+export default withRouter(DropdownLink)

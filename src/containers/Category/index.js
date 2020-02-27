@@ -6,8 +6,6 @@ import {
 } from '../../components'
 
 import {
-  Route,
-  Switch,
   withRouter,
   NavLink,
   Redirect
@@ -114,4 +112,4 @@ const Category = ({
   )
 }
 
-export default Category
+export default withRouter(Category)
