@@ -14,7 +14,8 @@ import {
   StarPage,
   Category,
   Stars,
-  MyProfile
+  MyProfile,
+  Admin
 } from './containers'
 
 import {
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/stars/:id" component={StarPage} />
           <Route path="/category/:type" component={Category} />
           <Route path="/my-profile" component={MyProfile} />
+          <Route path="/admin" component={Admin} />
         </Switch>
       </main>
       <Footer/>

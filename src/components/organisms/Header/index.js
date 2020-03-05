@@ -40,7 +40,7 @@ const Header = ({
   const { t, setLanguage } = useTranslator()
   let isHeaderDark = false
 
-  if (location.pathname.indexOf('my-profile') >= 0) {
+  if (location.pathname.indexOf('my-profile') >= 0 || location.pathname.indexOf('admin') >= 0) {
     isHeaderDark = true
   }
   const languages = [

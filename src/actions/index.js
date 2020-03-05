@@ -1,5 +1,5 @@
-import toggleDarkMode from './teamMembers';
+import toggleDarkMode from './teamMembers'
 
 export {
-  toggleDarkMode,
+  toggleDarkMode
 }

@@ -1,0 +1,101 @@
+.MyProfile{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    padding-top: 200px;
+    aside{
+        width: 277px;
+        border-top-right-radius: 32px;
+        background-image: linear-gradient(358deg, #452368 0%, #ef549e 100%);
+        .AdminTabs{
+            width: 277px;
+            margin: 50px 0;
+            .UserTabItem{
+                padding: 15px;
+                width: 245px;
+                cursor: pointer;
+                .Icon{
+                    margin: 0 16px 0 35px;
+                }
+                &.active {
+                    color: #000;
+                    background-color: #fff;
+                    border-top-left-radius: 100px;
+                    border-bottom-left-radius: 100px;
+                    .Icon {
+                      svg {
+                        fill: #452368;
+                        stroke-width: 2;
+                      }
+                    }
+                    .AdminTabItemText{
+                        color: #000;
+                        font-weight: bold;
+                    }
+                  }
+                .AdminTabItemText{
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    .AdminContent{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .MyProfile{
+        aside{
+            .UserInfo{
+                height: 120px;
+                .UserAvatar{
+                    width: 80px;
+                    height: 80px;
+                }
+                .UserInfoText{
+                    display: none;
+                }
+            }
+            .UserTabs{
+                width: 100px;
+                .UserTabItem{
+                    width: auto;
+                    .UserTabItemText{
+                        display: none;
+                    }
+                    .Icon{
+                        margin: 0 16px 0 16px;
+                    }
+                }
+            }
+        }
+        .MyProfileContent{
+            .MyProfileDetails{
+                padding: 0 ;
+                margin: 0;
+                .MyProfileProperties{
+                    .MyProfilePropertiesImg{
+                        border-bottom: solid 1px #979797;
+                        border-right: none;
+                        margin-bottom: 20px;
+                        .MyProfilePropertiesImage{
+                            display: flex;
+                            justify-content: center;
+                        }
+                        .MyProfilePropertiesIcon{
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .MyProfilePropertiesInfo{
+                        width: 80%;
+                    }
+                }
+            }
+        } 
+    }
+}
